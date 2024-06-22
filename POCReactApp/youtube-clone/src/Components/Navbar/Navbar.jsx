@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import './Navbar.css';
@@ -10,11 +11,11 @@ import more_icon from "../../assets/more.png";
 import notification_icon from "../../assets/notification.png";
 import profile_icon from "../../assets/jack.png";
 
-const Navbar = () => {
+const Navbar = ({setSidebar}) => {
   return (
     <nav className='flex-div'>
         <div className='nav-left flex-div'>
-            <img className='menu_icon' src={menu_icon} alt=''/>
+            <img className='menu_icon' src={menu_icon} alt='' onClick={()=>setSidebar(prev=>prev===false?true:false)}/>
             <img className='logo' src={logo} alt=''/>
         </div>
         <div className='nav-middle flex-div'>
