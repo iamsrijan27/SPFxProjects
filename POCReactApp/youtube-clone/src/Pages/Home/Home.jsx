@@ -13,4 +13,4 @@ const Home = ({sidebar}) => {
   )
 }
 
-export default Home
+export default Home;
